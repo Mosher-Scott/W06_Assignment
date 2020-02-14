@@ -20,9 +20,11 @@ namespace RazorPagesMovie
             _context = context;
         }
 
+        // This is what happens when data is posted from the form
         [BindProperty]
         public Movie Movie { get; set; }
 
+        // This gets the movie from the DB when the page loads from a GET method
         public async Task<IActionResult> OnGetAsync(int? id)
         {
             if (id == null)
