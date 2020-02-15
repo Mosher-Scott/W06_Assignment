@@ -13,7 +13,7 @@ namespace RazorPagesMovie.Models
         [Required]
         public string Title { get; set; }
 
-        [Display(Name = "Release Date")]
+        [Display(Name = "Release Date")]  // Sets the display name of the variable on the /movies index page
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime ReleaseDate { get; set; }
@@ -23,9 +23,9 @@ namespace RazorPagesMovie.Models
         [Column(TypeName = "decimal(18, 2)")]  // Allows the EF Core to correctly display the currency in the database
         public decimal Price { get; set; }
 
-        [Display(Name = "Release Date")] // Sets the display name of the variable on the /movies index page
-        [DataType(DataType.Date)]
-        public DateTime ReleaseDate { get; set; }
+        //[Display(Name = "Release Date")] // Sets the display name of the variable on the /movies index page
+        //[DataType(DataType.Date)]
+        //public DateTime ReleaseDate { get; set; }
 
         [RegularExpression(@"^[A-Z]+[a-zA-Z""'\s-]*$")]
         [Required]
